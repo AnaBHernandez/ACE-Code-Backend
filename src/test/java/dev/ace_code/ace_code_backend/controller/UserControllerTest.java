@@ -41,6 +41,7 @@ public class UserControllerTest {
         ResponseEntity<List<User>> response = userController.getAllUsers();
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
         assertEquals(2, response.getBody().size());
     }
 

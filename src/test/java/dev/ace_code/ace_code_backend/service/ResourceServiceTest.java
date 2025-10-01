@@ -14,6 +14,7 @@ import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -198,6 +199,7 @@ public class ResourceServiceTest {
 
             ResponseEntity<Resource> response = resourceService.getFile(filename);
 
+            assertThat(response.getHeaders().getContentType()).isNotNull();
             assertThat(response.getHeaders().getContentType().toString()).isEqualTo("application/octet-stream");
         }
 

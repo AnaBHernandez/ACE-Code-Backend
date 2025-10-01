@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -26,7 +25,6 @@ import dev.ace_code.ace_code_backend.service.ResourceService;
 public class ResourceController {
     private final ResourceService resourceService;
 
-    @Autowired
     public ResourceController(ResourceService resourceService) {
         this.resourceService = resourceService;
     }
