@@ -91,28 +91,31 @@ La primera versión de la plataforma incluye:
 
 /src
 ├── main
-│   ├── java/com/p6r # Código fuente del backend
+│   ├── java/dev/ace_code/ace_code_backend # Código fuente del backend
 │   ├── resources # Configuración y archivos estáticos
 └── test # Tests unitarios y de integración
-/frontend # Código fuente del frontend
 
 
 ## ⚙️ Instalación y Configuración
 
 ### Requisitos Previos
 
-* JDK 17+
+* JDK 21+
 * Maven 3.6+
-* Node.js y npm
 
 ### Pasos de Instalación
 
-1.  `git clone <URL-DEL-REPOSITORIO>`
-2.  `cd <NOMBRE-DEL-REPOSITORIO>`
-3.  Configura los archivos `application.properties` y `.env`.
+1.  `git clone https://github.com/AnaBHernandez/ACE-Code-Backend.git`
+2.  `cd ACE-Code-Backend`
+3.  Configura el archivo `application.properties` si es necesario.
 4.  `mvn clean install && mvn spring-boot:run`
-5.  `cd frontend && npm install && npm start`
-6.  Accede a `http://localhost:3000`.
+5.  Accede a `http://localhost:8080` para la API REST
+
+### Endpoints Disponibles
+
+- **Usuarios**: `GET/POST /users`, `GET/DELETE /users/{id}`, `POST /users/login`
+- **Recursos**: `GET/POST /resources/upload`, `GET/DELETE /resources/upload/{id}`, `GET /resources/upload/category/{category}`
+- **Archivos**: `GET /resources/upload/files/{filename}`
 
 ### Cómo Contribuir
 
